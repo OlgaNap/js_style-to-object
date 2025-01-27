@@ -8,13 +8,13 @@
 function convertToObject(sourceString) {
   // write your code here
   let resultArr = [];
+
   resultArr = sourceString.split(';');
 
   let result = {};
 
   resultArr = resultArr.map((lin) => lin.trimEnd().trimStart());
-  resultArr = resultArr.map((lin) => lin.replaceAll('/n', '').trim());
-  resultArr = resultArr.map((lin) => lin.replaceAll('/t', '').trim());
+  //  resultArr = resultArr.map((lin) => lin.replaceAll('\t', '').trim());
   resultArr = resultArr.filter((lin) => lin !== '');
   resultArr = resultArr.map((lin) => lin.split(':'));
 
